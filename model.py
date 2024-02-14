@@ -132,7 +132,4 @@ class Discriminator(nn.Module):
 
         return self.activation(x)
 
-if __name__ == "__main__":
-    # Instantiate the model
-    model = Autoencoder()
-    print(model)
+
