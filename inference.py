@@ -16,7 +16,7 @@ from data_inspect import (denormalize, label_to_string_one_hot, list_images,
                           ImageLoader,
                           prepare_dataset_from_dictionary_greyscale_x,
                           vector_to_image)
-from model import Autoencoder, UNet, Discriminator
+from model import UNet, Discriminator
 
 
 def inference(autoencoder, data, outfile):

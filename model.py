@@ -2,16 +2,6 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-def init_weights(m):
-    pass
-    #if isinstance(m, nn.Conv2d) or isinstance(m, nn.ConvTranspose2d):
-    #    nn.init.xavier_uniform_(m.weight)
-        #if m.bias is not None:
-        #    nn.init.constant_(m.bias, 0)
-    #elif isinstance(m, nn.BatchNorm2d):
-    #    nn.init.constant_(m.weight, 1)
-    #    nn.init.constant_(m.bias, 0)
-
 class UNetBlock(nn.Module):
     def __init__(self, channels_in, channels_out, downsampling=False, upsampling=False, lastLayer=False):
         super().__init__()
@@ -141,56 +131,6 @@ class Discriminator(nn.Module):
         x = x / self.additional_complexity
 
         return self.activation(x)
-
-
-
-class Autoencoder(nn.Module):
-    def __init__(self):
-        super(Autoencoder, self).__init__()
-
-        self.conv1 = nn.Conv2d(
-            3, 256, kernel_size=3, stride=1, padding=1
-        )  # Output: [batch_size, 64, 32, 32]
-        self.conv2 = nn.Conv2d(
-            256, 128, kernel_size=3, stride=2, padding=1
-        )  # Output: [batch_size, 32, 16, 16]
-        self.conv3 = nn.Conv2d(
-            128, 64, kernel_size=3, stride=1, padding=1
-        )  # Output: [batch_size, 16, 16, 16]
-        self.conv4 = nn.Conv2d(
-            64, 3, kernel_size=3, stride=1, padding=1
-        )  # Output: [batch_size, 3, 16, 16]
-
-        # Decoder
-        self.deconv1 = nn.ConvTranspose2d(
-            3, 64, kernel_size=3, stride=2, padding=1, output_padding=1
-        )  # Output: [batch_size, 16, 32, 32]
-        self.deconv2 = nn.ConvTranspose2d(
-            64, 128, kernel_size=3, stride=1, padding=1
-        )  # Output: [batch_size, 32, 32, 32]
-        self.deconv3 = nn.ConvTranspose2d(
-            128, 256, kernel_size=3, stride=1, padding=1
-        )  # Output: [batch_size, 64, 32, 32]
-        self.deconv4 = nn.ConvTranspose2d(
-            256, 3, kernel_size=3, stride=1, padding=1
-        )  # this brings it back to [batch_size, 3, 32, 32]
-
-    def forward(self, x):
-        # Encoder
-        x = F.relu(self.conv1(x))
-        x = F.relu(self.conv2(x))
-        x = F.relu(self.conv3(x))
-        x = F.relu(self.conv4(x))
-
-        # Decoder
-        x = F.relu(self.deconv1(x))
-        x = F.relu(self.deconv2(x))
-        x = F.relu(self.deconv3(x))
-        x = torch.sigmoid(
-            self.deconv4(x)
-        )  # Use sigmoid to ensure output is between 0 and 1, like an image
-        return x
-
 
 if __name__ == "__main__":
     # Instantiate the model

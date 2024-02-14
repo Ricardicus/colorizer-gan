@@ -9,12 +9,8 @@ from PIL import Image
 import matplotlib.pyplot as plt
 from torch.utils.data import DataLoader
 
-from data_inspect import (denormalize, label_to_string_one_hot, list_images,
-                          ImageLoader,
-                          prepare_dataset,
-                          prepare_dataset_from_dictionary_greyscale_x,
-                          vector_to_image)
-from model import Autoencoder, UNet, Discriminator
+from data_inspect import list_images, ImageLoader
+from model import UNet, Discriminator
 
 
 def train(
