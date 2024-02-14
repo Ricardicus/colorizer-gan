@@ -1,0 +1,8 @@
+gan_losses.csv
+*.pth
+__pycache__
+# Where i keep a landscapes dataset
+landscapes_train
+
+# where I keep a test dataset
+rawtest
