@@ -7,4 +7,13 @@ using deep learning.
 
 I trained on a data set of landscapes, taken from kaggle and I got results I was satisfied with.
 
+## Adversarial training
+
+Just training the generator network, the UNet model, on optimization for some kind of norm of the output will likely 
+create a model that produces mono-colored images. The GAN effect produces resemblance with the training data in the output,
+which for example can mean that the color intensity of the output will resemble that of images trained on.
+
+# Documentation/report
+
+I will try to write a comprehensible report on what happened here. That is on my TODO list.
 
