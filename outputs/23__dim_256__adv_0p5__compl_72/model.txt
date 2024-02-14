@@ -1,0 +1,1 @@
+python train.py --images landscapes_train --batch-size 16 --epochs 14 --lr 0.000007 --itr 75000 --complexity 72 --store-net 1500 --device mps --batch-load 300 --step-decay 2000 --step-decay-factor 1.0 --adversarial-factor 0.5 --dim 256 --disc-complexity 14 --disc-hold-out 1 --lr-disc 0.000007 --filter-gray
