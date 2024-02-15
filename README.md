@@ -12,9 +12,8 @@ a model I trained with the code in this repo.
 
 ## Adversarial training
 
-Just training the generator network, the UNet model, on optimization for some kind of norm of the output will likely 
-create a model that produces mono-colored images. The GAN effect produces resemblance with the training data in the output,
-which for example can mean that the color intensity of the output will resemble that of images trained on.
+I learned the hard way that just training the generator network, the UNet model, on optimization for some kind of norm of the difference between original and generated examples will likely 
+create a model that produces mono-colored images. The GAN effect was needed because it optimizes for the resemblance of the generator color predictions with the original colors in the training set, which mean that the color intensity of the output will resemble that of images it was trained on.
 
 # Technical report
 
