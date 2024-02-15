@@ -5,7 +5,7 @@ using deep learning.
 
 ![Colorization Output](https://github.com/Ricardicus/colorizer-gan/blob/master/outputs/23__dim_256__adv_0p5__compl_72/outputs/collection_image____2.png "Colorization Project")
 
-I trained on a data set of landscapes, taken from kaggle and I got results I was satisfied with.
+I trained on a data set of landscapes, taken from Kaggle ([Landscape Pictures](https://www.kaggle.com/datasets/arnaud58/landscape-pictures)) and I got results I was satisfied with.
 In the image above, we have a grid of 6x3 images. The the left, the 3x3 grid of images to the left, we have gray scaled images taken from the internet that are not part of the
 training set. And to the right, the 3x3 grid of images to the right, we have the corresponding output from 
 a model I trained with the code in this repo.
