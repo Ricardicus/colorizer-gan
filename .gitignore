@@ -6,3 +6,6 @@ landscapes_train
 
 # where I keep a test dataset
 rawtest
+
+# where I store outputs
+outputs/*.png
