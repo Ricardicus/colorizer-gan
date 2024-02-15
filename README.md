@@ -16,7 +16,9 @@ Just training the generator network, the UNet model, on optimization for some ki
 create a model that produces mono-colored images. The GAN effect produces resemblance with the training data in the output,
 which for example can mean that the color intensity of the output will resemble that of images trained on.
 
-# Documentation/report
+# Technical report
 
-I will try to write a comprehensible report on what happened here. That is on my TODO list.
+I did this as part of a course at the university, so I wrote a technical report on it here: [Colorization Project PDF](https://github.com/Ricardicus/colorizer-gan/blob/master/report/Colorization_Project.pdf)
+
+
 
