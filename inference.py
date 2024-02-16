@@ -10,18 +10,8 @@ from PIL import Image
 import matplotlib.pyplot as plt
 from torch.utils.data import DataLoader
 
-from data_inspect import (denormalize, label_to_string_one_hot, list_images,
-                          poll_dataset_batch_from_dictionary_greyscale_x,
-                          prepare_dataset,
-                          ImageLoader,
-                          prepare_dataset_from_dictionary_greyscale_x,
-                          vector_to_image)
+from data_inspect import list_images, ImageLoader
 from model import UNet, Discriminator
-
-
-def inference(autoencoder, data, outfile):
-    return autoencoder(data)
-
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
