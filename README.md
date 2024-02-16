@@ -3,7 +3,13 @@
 Here is a project I have been working on to solve the task of image colorization
 using deep learning. 
 
+# Examples
+
+Generator complexity factor set to 72, discriminator to 16, adversarial factor 0.1, generated this:
+
 ![Colorization Output](https://github.com/Ricardicus/colorizer-gan/blob/master/outputs/23__dim_256__adv_0p5__compl_72/outputs/collection_image____2.png "Colorization Project")
+
+Generator complexity factor set to 128, discriminator to 42, adversarial factor 0.5, generated this:
 
 ![Colorization Output](https://github.com/Ricardicus/colorizer-gan/blob/master/outputs/collection_image__compl_128_adv_0.5.png "Colorization Project")
 
